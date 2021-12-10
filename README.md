@@ -25,3 +25,6 @@ Becoming more familiar with "for-loops" and the power of looping thru arrays.
 
 ## Deployed Webpage:
 
+https://ianmordaunt.github.io/03-Password_Generator/
+
+![Alt text]()
