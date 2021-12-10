@@ -92,11 +92,11 @@ let createdPassword = [];
   let passwordLength = parseInt(prompt(
     "Enter the number of characters you want for your password. (between 8 and 128 characters)"
   ));
-
+// Making sure the imput is only a number.
   if(Number.isNaN(passwordLength)){
     return alert("Invalid character Length.");
   }
-
+// Setting perameters for the "passwordLength" 
   if (!passwordLength || passwordLength < 8 || passwordLength > 128) {
     return alert("Invalid character Length.");
   }
@@ -133,15 +133,17 @@ let createdPassword = [];
   }
   console.log(output);
 
-
+// Run the output array thru the Math. to formulat a randomized password. Which is then stored in a local variable.
+// Using a second random varibale  to store the randomized password in the array of "output".
   for (let i = 0; i < passwordLength; i++) {
     var randomFormula= Math.floor(Math.random() * output.length);
     var randomOutput = output[randomFormula]
 
+// Using .push to add "randomOutput" and the last and only list item in the "createPassword" array.
     createdPassword.push(randomOutput)
   }
   
-
+// Finally using ".join" to concatinate the "createPassword" array into a string.
   return createdPassword.join('');
 
 }
